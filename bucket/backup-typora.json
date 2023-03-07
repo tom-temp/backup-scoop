@@ -13,10 +13,11 @@
         "4.右击—>权限, 把所有用户的权限都设为拒绝"
     ],
     "post_install": [
-        "if (!(Test-Path \"$HOME\\AppData\\Roaming\\Typora\") {",
+        "if ((Test-Path \"$HOME\\AppData\\Roaming\\Typora\")) {",
         "    info '[backup-typora] delete existing profiles...'",
         "    Remove-Item -Path \"$HOME\\AppData\\Roaming\\Typora\" -Recurse",
         "}",
+        "mkdir \"$persist_dir\"",
         "New-Item -ItemType Junction -Path \"$HOME\\AppData\\Roaming\\Typora\" -Target \"$persist_dir\""
     ],
     "architecture": {
