@@ -7,7 +7,7 @@
         "url": "https://support.typora.io/License-Agreement/"
     },
     "notes": [
-        "1.安装完成后请先断网",
+        "1.第一次运行跳出弹窗后",
         "2.打开注册表，找到'HKEY_CURRENT_USER\\SOFTWARE\\Typora'",
         "3.设置过期日期",
         "4.右击—>权限, 把所有用户的权限都设为拒绝"
