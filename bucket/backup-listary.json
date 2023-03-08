@@ -12,7 +12,7 @@
             "hash": "83060dd1e3dfe2a345bfbec2265e6d6dac5bc7ad0ad037c26b082972d95db4c4"
         }
     },
-    "extract_dir": "ListaryPortable",
+    "innosetup": true,
     "persist": "UserData",
     "shortcuts": [
         [
