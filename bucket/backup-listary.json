@@ -6,6 +6,14 @@
     "notes": [
         "安装成功"
     ],
+    "post_install": [
+        "if ((Test-Path \"$HOME\\AppData\\Roaming\\Listary\")) {",
+        "    info '[backup-Listary] delete existing profiles...'",
+        "    Remove-Item -Path \"$HOME\\AppData\\Roaming\\Listary\" -Recurse",
+        "}",
+        "mkdir \"$persist_dir\"",
+        "New-Item -ItemType Junction -Path \"$HOME\\AppData\\Roaming\\Listary\" -Target \"$persist_dir\""
+    ],
     "architecture": {
         "64bit": {
             "url": "https://www.listary.com/download/Listary171014.exe",
